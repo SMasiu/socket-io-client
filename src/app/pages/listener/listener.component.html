@@ -1,0 +1,24 @@
+<section class="wrapper">
+  <header class="header">
+    <h1>
+      Channel: <span class="channel-name">{{ listener.eventName }}</span>
+    </h1>
+    <section>
+      <button mat-raised-button color="warn" (click)="deleteListener()">
+        Remove listener
+      </button>
+    </section>
+  </header>
+  <section *ngIf="!listener || !listener.data.length" class="loading">
+    <p class="loading-text">Content will appear here</p>
+    <mat-spinner diameter="30"></mat-spinner>
+  </section>
+  <section class="event-output" *ngIf="listener">
+    <section class="event-output-item" *ngFor="let d of listener.data">
+      <app-listener-event-output
+        [content]="d.payload"
+        [date]="d.date"
+      ></app-listener-event-output>
+    </section>
+  </section>
+</section>

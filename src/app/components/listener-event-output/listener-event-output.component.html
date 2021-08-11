@@ -1,0 +1,15 @@
+<section class="event-output auto-height-code">
+  <header>Handled at {{ date | date: "mediumTime" }}</header>
+  <section class="code">
+    <ngx-codemirror
+      [(ngModel)]="content"
+      [options]="{
+        lineNumbers: true,
+        theme: 'eclipse',
+        mode: { name: 'javascript', json: true },
+        smartIndent: true,
+        value: '[1, 2, 3]'
+      }"
+    ></ngx-codemirror>
+  </section>
+</section>

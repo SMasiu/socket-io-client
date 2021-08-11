@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~codemirror/lib/codemirror";
+@import "~codemirror/theme/eclipse";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.header .mat-form-field-wrapper {
+  margin-bottom: -1.25em !important;
+}
+
+.auto-height-code .CodeMirror {
+  height: auto;
+}
+
+.btn {
+  min-width: 100px !important;
+}

@@ -1,0 +1,15 @@
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.content {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 400px 1fr;
+}
+
+.content-section {
+  height: 100%;
+}

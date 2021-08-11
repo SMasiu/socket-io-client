@@ -1,0 +1,16 @@
+<section class="outer-wrapper">
+  <section class="wrapper">
+    <header>
+      <h1>Create Listener</h1>
+    </header>
+    <form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="outline">
+        <mat-label>Channel</mat-label>
+        <input matInput placeholder="messages" formControlName="eventName" />
+      </mat-form-field>
+      <footer class="footer">
+        <button mat-raised-button color="primary" type="submit">Create</button>
+      </footer>
+    </form>
+  </section>
+</section>

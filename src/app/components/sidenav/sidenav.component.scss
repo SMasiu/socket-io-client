@@ -1,0 +1,25 @@
+:host {
+  .mat-tree {
+    background-color: inherit;
+  }
+}
+
+.app-aside {
+  height: calc(100vh - 80px);
+  overflow-y: auto;
+  background-color: rgb(250, 250, 250);
+  padding: 25px;
+  border-right: 2px solid rgb(209, 209, 209);
+}
+
+.aside-action {
+  width: 100%;
+
+  &:not(:first-child) {
+    margin-top: 20px;
+  }
+}
+
+.resources {
+  margin-top: 20px;
+}

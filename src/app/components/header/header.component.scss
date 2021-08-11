@@ -1,0 +1,31 @@
+.header {
+  display: flex;
+  align-items: center;
+  background-color: rgb(250, 250, 250);
+  padding: 10px 25px;
+  min-height: 80px;
+  border-bottom: 2px solid rgb(209, 209, 209);
+}
+
+.logo {
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-size: 26px;
+  margin: 0;
+}
+
+.connection-status {
+  color: rgb(110, 110, 110);
+  margin: 0;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 50px;
+  align-items: center;
+}
+
+.host-input {
+  width: 100%;
+}

@@ -1,0 +1,16 @@
+<header class="header">
+  <h2 class="logo">Socket.io Client</h2>
+  <section class="host-input">
+    <mat-form-field class="host-input" appearance="outline">
+      <mat-label>Host</mat-label>
+      <input
+        matInput
+        placeholder="http:127.0.0.1:8080"
+        [formControl]="hostControl"
+      />
+    </mat-form-field>
+  </section>
+  <section>
+    <p class="connection-status">{{ socketStatusMessage }}</p>
+  </section>
+</header>

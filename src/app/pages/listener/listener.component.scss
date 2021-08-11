@@ -1,0 +1,48 @@
+.wrapper {
+  padding: 50px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.channel-name {
+  font-weight: 500;
+}
+
+.event-output {
+  margin-top: 25px;
+}
+
+.event-output-item {
+  position: relative;
+  &:not(:first-child) {
+    margin-top: 50px;
+  }
+  &:not(:last-child) {
+    &::before {
+      content: "";
+      width: 90%;
+      height: 1px;
+      position: absolute;
+      bottom: -25px;
+      left: 50%;
+      transform: translate(-50%);
+      background-color: #d1d1d1;
+    }
+  }
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.loading-text {
+  color: rgb(94, 94, 94);
+}

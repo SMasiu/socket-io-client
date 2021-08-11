@@ -1,0 +1,54 @@
+<aside class="app-aside">
+  <section class="creator">
+    <h3 class="aside-heading">Creator</h3>
+    <nav class="aside-actions">
+      <button
+        mat-raised-button
+        class="aside-action"
+        routerLink="/create-listener"
+      >
+        Create Listener
+      </button>
+      <button
+        mat-raised-button
+        class="aside-action"
+        routerLink="/create-emitter"
+      >
+        Create Emitter
+      </button>
+    </nav>
+  </section>
+
+  <section class="resources">
+    <h3 class="aside-heading">Resources</h3>
+    <mat-accordion>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>Emitters</mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-action-list>
+          <mat-list-item
+            *ngFor="let emitter of emitters"
+            (click)="handleEmitterClick(emitter)"
+            >{{ emitter.eventName }}</mat-list-item
+          >
+        </mat-action-list>
+      </mat-expansion-panel>
+      <mat-expansion-panel
+        (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title>Listeners</mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-action-list>
+          <mat-list-item
+            *ngFor="let listener of listeners"
+            (click)="handleListerClick(listener)"
+            >{{ listener.eventName }}</mat-list-item
+          >
+        </mat-action-list>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </section>
+</aside>
